@@ -14,16 +14,17 @@ export const Button = styled.button`
   border-radius: 10px;
   font-size: 26px;
   color: white;
-  background-color: ${p => makeBgrBtn(p.id)};
+  background-color: ${p => makeBgrBtn(p.option)};
   transition: transform 200ms linear;
+  text-transform: capitalize;
 
   :hover {
     transform: scale(1.1);
   }
 `;
 
-function makeBgrBtn(id) {
-  switch (id) {
+function makeBgrBtn(option) {
+  switch (option) {
     case 'good':
       return '#32b332';
     case 'neutral':
